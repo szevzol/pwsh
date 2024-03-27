@@ -1,14 +1,5 @@
 oh-my-posh init pwsh --config '~\.config\pwsh\poshthemes\powerlevel10k_lean.omp.json' | Invoke-Expression
-#Invoke-Expression (&starship init powershell)
 
-# Shows navigable menu of all options when hitting Tab
-# Set-PSReadlineKeyHandler -Key Tab -Function MenuComplete
-
-# Autocompletion for arrow keys
-#Set-PSReadlineKeyHandler -Key UpArrow -Function HistorySearchBackward
-# Set-PSReadlineKeyHandler -Key DownArrow -Function HistorySearchForward
-
-# replace 'Ctrl+t' and 'Ctrl+r' with your preferred bindings:
 Set-PsFzfOption -PSReadlineChordProvider 'Ctrl+t' -PSReadlineChordReverseHistory 'Ctrl+r'
 
 Set-PSReadLineKeyHandler -Key Tab -ScriptBlock { Invoke-FzfTabCompletion }
@@ -27,4 +18,5 @@ Import-Module ZLocation
 $env:EDITOR = "nvim"
 $env:VIRTUAL_ENV_DISABLE_PROMPT = 1
 
+Import-Module venvlink-autoenv
 Import-Module posh-direnv
