@@ -17,7 +17,7 @@ Usually it's `~\Documents\PowerShell\Microsoft.PowerShell_profile.ps1`
 There will be one line in this profile:
 
 ```powershell
-&"~\.config\pwsh\Microsoft.PowerShell_profile.ps1"
+. ~\.config\pwsh\Microsoft.PowerShell_profile.ps1
 
 ```
 
